@@ -1,0 +1,19 @@
+<div style="text-align: center">
+<h4>Home Component</h4>
+</div>
+<div class="leftNav">
+  <div *ngFor="let item of items;">
+    <span class="itemsClass"><a [routerLink]="['item', item.id]">{{item.name}}</a></span>
+    <input type="checkbox" [checked]="isItemChecked(item.id)" name="itemCheckBox" (change)="checkItem(item, $event)">
+    <input type="button" value="Delete" (click)="deleteItem(item)">
+  </div>
+</div>
+  <p class="progressBar">Progress Bar</p>
+<div class="first">
+  <div class="second" [ngStyle]="{'width.%': width}">
+  </div>
+</div>
+<div class="addItem">
+  <input type="text" name="addItem" [(ngModel)]="newItem.name">
+  <input type="button" value="Add" (click)="addTodoItem(newItem)">
+</div>

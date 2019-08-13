@@ -1,0 +1,20 @@
+<div>
+  <h4>{{selectedItem?.name}} Todo Lists</h4>
+</div>
+<div class="leftNav" *ngIf="selectedItem">
+    <div *ngFor="let task of itemTasks">
+      {{task.name}}  
+    <input type="checkbox" [checked]="isTaskCompleted(task.id)" name="itemHomeCheckBox" (change)="completeTask(task, $event)">
+    <input type="button" value="Delete" (click)="deleteTask(task)">
+    </div>
+</div>
+<p class="progressBar">Progress Bar</p>
+<div class="first">
+  <div class="second" [ngStyle]="{'width.%': width}">
+  </div>
+</div>
+<div class="addItem">
+  <input type="text" name="newTaskName" [(ngModel)]="newTask.name">
+  <input type="button" value="Add" (click)="addTask()">
+</div>
+<input type="button" value="Back" (click)="backToHome()" class="backButton">

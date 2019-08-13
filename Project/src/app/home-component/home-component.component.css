@@ -1,0 +1,30 @@
+.leftNav {
+    position: absolute;
+    left: 20%;
+    text-align: left;
+    cursor: pointer;
+    background: #ddd;
+}
+.first {
+    height: 10px;
+    width: 50%;
+    background: #ddd;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    border: 1px solid;
+    border-radius: 10%;
+}
+.second {
+    height: 10px;
+    background: green;
+}
+.itemsClass {
+    color: black;
+    text-decoration: none;
+}
+.progressBar {
+    top: 40%;
+    position: absolute;
+    left: 42%;
+}
