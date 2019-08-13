@@ -1,0 +1,22 @@
+<div class="topnav" id="myTopnav">
+  <span>
+    <input [(ngModel)]="searchText" class="searchPipe" placeholder="search text goes here">
+    <input type="text" [hidden]="!selectedListItem" class="btn btn-primary btn-xs deleteButton" value="delete" (click)="deleteListItem()">
+  </span>
+  <a>{{listItem?.name}}</a>
+  <div class="col-lg-12">
+    <div class="row" *ngFor="let list of lists | filter: searchText">
+      <a class="col-lg-5" (click)="editList(list)">{{list.name}}</a>
+      <span class="col-lg-7 dateTime">{{list.date | date : 'EEEE, h:mm a ' }}</span>
+    </div>
+  </div>
+</div>
+<div>
+  <a href="javascript:void(0);" id='sandwich' class="icon" (click)="myFunction()">
+    <i class="fa fa-bars"></i></a>
+</div>
+<div class="listNav">
+  Add a new list
+  <input type="text" style="width: 100%" name="listItem" [(ngModel)]="listItem.name">
+  <input type="button" class="btn btn-primary" style="margin-top: 5px;" value="create" (click)="addListItem(listItem)">
+</div>

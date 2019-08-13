@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #ddd;
+  display: inline-grid;
+  width: 40%;
+  margin: 25px;
+  float: left;
+  position: relative;
+  overflow: scroll;
+  max-height: 300px;
+ 
+}
+.searchPipe {
+  width: 40%;
+  float: left;
+  margin-left: 10px;
+  margin-top: 4px;
+  border-radius: 8%;
+}
+.deleteButton {
+  width: 15%;
+  float: right;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+.dateTime {
+  margin-top: 15px;
+}
+.listNav {
+    margin: 25px;
+    width: 30%;
+    position: absolute;
+    left: 50%;
+}
+.icon {
+  display: none;
+}
+.topnav a {
+  float: left;
+  text-align: left !important;
+  display: block;
+  color: brown;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+@media screen and (max-width: 750px) {
+  .topnav {display: none;}
+  .icon {
+    float: left;
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .topnav.responsive {position: relative;
+  	top: 20px;
+    display: inline-grid;
+    width: 40%;
+  }
+}
